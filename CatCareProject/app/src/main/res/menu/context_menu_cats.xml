@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/update_cat"
+        android:title="@string/cMenu_update"/>
+    <!--<item android:id="@+id/add_photo_cat"-->
+        <!--android:title="@string/cMenu_add_photo" />-->
+    <item android:id="@+id/delete_cat"
+        android:title="@string/cMenu_delete" />
+    <!--<item android:id="@+id/add_meal_cat"-->
+        <!--android:title="@string/cMenu_add_meal_cat" />-->
+
+
+</menu>

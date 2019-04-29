@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_report_quantity_daily"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.anna.catcareproject.com.ibmt.anna.catcareproject.view.ReportQuantityDailyActivity">
+
+    <TextView
+        android:id="@+id/tv_report_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/tv_border"
+        android:text="@string/text_report_quantity"
+        android:textAlignment="center"
+        android:textSize="22sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_gr_btn_qua_daily"
+        android:layout_below="@+id/tv_report_quantity"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <include layout="@layout/report_quantity_line_template" />
+
+        <View
+            android:id="@+id/line_cat"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/lightBlue" />
+
+        <ListView
+            android:id="@+id/lv_report_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gr_btn_qua_daily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_gr_quantaty_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="@string/button_viewGraph" />
+
+    </LinearLayout>
+
+</RelativeLayout>

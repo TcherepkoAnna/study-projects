@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frgmnt_updateCat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_update_cat_image"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/whiteColor">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView_cat"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="12dp"
+            android:innerRadius="0dp"
+            android:scaleType="fitCenter"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            app:cardCornerRadius="70dp">
+
+            <ImageView
+                android:id="@+id/image_view_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher_cat"></ImageView>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_updateCatName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_update_cat_image"
+        android:layout_marginTop="5dp"
+        app:hintTextAppearance="@android:style/TextAppearance.DeviceDefault">
+
+        <EditText
+            android:id="@+id/editText_updateCatName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/hint_catName"
+            android:inputType="textPersonName"
+            android:textSize="22sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:id="@+id/line_cat"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/input_layout_updateCatName"
+        android:layout_marginTop="0dp"
+        android:background="@color/lightYellowDrawer" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollview_cat_params"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/button_updateCat"
+        android:layout_below="@+id/line_cat"
+        android:fillViewport="true"
+        android:padding="@dimen/activity_vertical_margin"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+
+        <LinearLayout
+            android:id="@+id/l_layout_cat_params"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_hint_cats_gender"
+                style="@style/InputLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/hint_pet_gender" />
+
+            <Spinner
+                android:id="@+id/sp_cats_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/pet_gender_array"
+                android:spinnerMode="dialog" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_addCatAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:hintTextAppearance="@android:style/TextAppearance.DeviceDefault">
+
+                <EditText
+                    android:id="@+id/editText_addCatAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/hint_age"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_addCatWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:hintTextAppearance="@android:style/TextAppearance.DeviceDefault">
+
+                <EditText
+                    android:id="@+id/editText_addCatWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:hint="@string/hint_weight"
+                    android:inputType="numberDecimal" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_hint_cats_sex"
+                style="@style/InputLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/hint_sex" />
+
+            <Spinner
+                android:id="@+id/spinner_cats_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/sex_array"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:id="@+id/tv_hint_condition"
+                style="@style/InputLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/hint_condition" />
+
+
+            <Spinner
+                android:id="@+id/sp_cats_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/health_condition_array"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:id="@+id/tv_hint_addCatIRate"
+                style="@style/InputLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/hint_catNorm" />
+
+
+            <Spinner
+                android:id="@+id/sp_cats_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/button_updateCat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/button_save" />
+
+</RelativeLayout>

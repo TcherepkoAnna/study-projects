@@ -1,0 +1,199 @@
+<resources>
+    <string name="app_name">Pet Care</string>
+    <string-array name="menuTitles_array">
+        <item>@string/item_add_pet</item>
+        <item>@string/item_add_meal</item>
+        <item>@string/item_add_food</item>
+        <item>@string/item_add_intakeRate</item>
+        <item>@string/item_add_analysis</item>
+        <item>@string/item_get_report</item>
+        <item>@string/item______</item>
+        <item>@string/item_contacts</item>
+        <item>@string/item_about</item>
+    </string-array>
+
+    <string name="item_add_pet">PETS</string>
+    <string name="item_add_intakeRate">NUTRITION RATES</string>
+    <string name="item_add_meal">MEALS</string>
+    <string name="item_add_food">FOODS</string>
+    <string name="item_add_analysis">LAB TESTS</string>
+    <string name="item_get_report">REPORTS</string>
+    <string name="item______">* * *</string>
+    <string name="item_contacts">contacts</string>
+    <string name="item_about">about</string>
+
+
+    <string-array name="reports_array">
+        <item>@string/item_report_1</item>
+        <item>@string/item_report_2</item>
+        <item>@string/item_report_3</item>
+        <item>@string/item_report_4</item>
+        <item>@string/item_report_5</item>
+    </string-array>
+
+    <string name="item_report_1">\nget pet\'s  selected intake rate parameters\n</string>
+    <string name="item_report_2">\nget daily nutrients intake\n</string>
+    <string name="item_report_3">\nget all meals\n</string>
+    <string name="item_report_4">\nget daily food quantity\n</string>
+    <string name="item_report_5">\nget average (daily) food quantity \n</string>
+
+
+    <string-array name="report_rates_keys_array">
+        <item>@string/item__energy</item>
+        <item>@string/item__proteins</item>
+        <item>@string/item__fats</item>
+        <item>@string/item__carbs</item>
+    </string-array>
+
+    <string name="item__name">name</string>
+    <string name="item__energy">energy</string>
+    <string name="item__proteins">proteins</string>
+    <string name="item__fats">fats</string>
+    <string name="item__carbs">carbs</string>
+    <string name="item__quantity">quantity</string>
+
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_websearch">Web search</string>
+    <string name="action_send">Send</string>
+    <string name="action_createChooser">Select email client: </string>
+
+
+    <string name="app_not_available">Sorry, there\'s no appropriate application available</string>
+
+    <string name="button_save">save</string>
+    <string name="button_addNewFood">+ new food</string>
+    <string name="button_syncFood">download new foods</string>
+    <string name="button_syncRate">download new rates</string>
+    <string name="button_updateFood">update food</string>
+    <string name="button_addCat">+ new pet</string>
+    <string name="button_updateCat">update pet</string>
+    <string name="button_addCatPhoto">add cat\'s photo</string>
+    <string name="button_deleteFood">delete food</string>
+    <string name="button_deleteCat">delete pet</string>
+    <string name="button_addRate">+ new rate</string>
+    <string name="button_updateRate">update rate</string>
+    <string name="button_deleteRate">delete rate</string>
+    <string name="button_viewGraph">graph</string>
+    <string name="button_add_contact">+ new contact</string>
+    <string name="button_add">add</string>
+    <string name="button_cat_add_meal">add meal to this pet</string>
+    <string name="button_choose_meal_date">+ date</string>
+
+
+    <string name="hint_foodName">Enter food name</string>
+    <string name="hint_foodState">Enter food state</string>
+    <string name="hint_intakeRate_name">Enter Nutrition IntakeRate name</string>
+    <string name="hint_catName">Enter pet\'s name</string>
+    <string name="hint_catDateOFfBirth">Enter pet\'s birth date</string>
+    <string name="hint_catNorm">Select pet\'s nutrition intake rate: </string>
+    <string name="hint_energy_value">Enter energy value</string>
+    <string name="hint_proteins_value">Enter proteins value</string>
+    <string name="hint_fats_value">Enter fats value</string>
+    <string name="hint_carbs_value">Enter carbohydrates value</string>
+    <string name="hint_age">Enter age</string>
+    <string name="hint_weight">Enter weight</string>
+    <string name="hint_name">Enter name</string>
+    <string name="hint_tel_number">Enter phone number</string>
+    <string name="hint_description">Enter description</string>
+    <string name="hint_sex">Select sex: </string>
+    <string name="hint_condition">Select health condition: </string>
+    <string name="hint_pet_gender">Select pet gender: </string>
+    <string name="hint_pet">Select pet: </string>
+    <string name="hint_food">Select food: </string>
+    <string name="hint_reports_select">Select report to show: </string>
+    <string name="hint_meal_quantity">Enter quantity, gr</string>
+    <string name="hint_chosen_cat"> choose a pet first</string>
+
+
+    <string name="toastNewCat">new pet added with id: </string>
+    <string name="toastNewContact">new contact added with id: </string>
+    <string name="toastNewFood">new food added with id: </string>
+    <string name="toastNewRate">new rate added with id: </string>
+    <string name="toastFoodUpdated">number of foods updated: </string>
+    <string name="toastCatUpdated">number of pets updated: </string>
+    <string name="toastContactUpdated">number of contacts updated: </string>
+    <string name="toastRateUpdated">number of rates updated: </string>
+    <string name="toastFoodDeleted">number of foods deleted: </string>
+    <string name="toastRateDeleted">number of rates deleted: </string>
+    <string name="toastCatDeleted">number of pets deleted: </string>
+    <string name="toast_fill_the_field">Fill the field, please</string>
+    <string name="toast_fill_all_fields">Fill all fields, please</string>
+    <string name="toast_food_exists">Food with such name and state exists already</string>
+    <string name="toast_contact_exists">Such contact exists already</string>
+    <string name="toast_rate_exists">Such rate exists already</string>
+    <string name="toast_choose_item">Choose an item first</string>
+    <string name="toastContactDeleted">number of contacts deleted: </string>
+    <string name="toastNewCalendar">new calendar entry added with id:</string>
+    <string name="toast_foods_added">number of foods added: </string>
+    <string name="toast_rates_added">number of rates added: </string>
+
+
+    <string name="cMenu_update">update</string>
+    <string name="cMenu_delete">delete</string>
+    <string name="cMenu_add_meal_cat">add meal to this pet</string>
+    <string name="cMenu_add_photo">add photo</string>
+    <string name="cMenu_show">show</string>
+    <string name="text_report_rate">PET\'S INTAKE RATE PARAMETERS</string>
+    <string name="text_report_value_date">PET\'S DAILY NUTRIENTS INTAKE</string>
+    <string name="text_report_meals">ALL PET\'S MEALS</string>
+    <string name="text_report_quantity">DAILY QUANTITY OF FOOD</string>
+    <string name="text_report_prot">, PROTEINS</string>
+
+    <string name="header_date">Date </string>
+    <string name="header_quantity">Quantity, gr. </string>
+    <string name="header_quantity_total">Total daily quantity, gr. </string>
+    <string name="header_food_name">Food name </string>
+    <string name="header_intake_value">Values </string>
+
+
+    <string-array name="sex_array">
+        <item>@string/unknown_sex</item>
+        <item>@string/female</item>
+        <item>@string/male</item>
+    </string-array>
+
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="unknown_sex">unknown sex</string>
+
+    <string-array name="health_condition_array">
+        <item>general condition</item>
+        <item>young</item>
+        <item>nursing</item>
+        <item>senior</item>
+        <item>ckd</item>
+        <item>diabet</item>
+        <item>obesity</item>
+    </string-array>
+
+    <string-array name="pet_gender_array">
+        <item>@string/other</item>
+        <item>@string/cat</item>
+        <item>@string/dog</item>
+    </string-array>
+
+    <string name="cat">cat</string>
+    <string name="dog">dog</string>
+    <string name="other">other</string>
+
+    <string-array name="food_state_array">
+        <item>@string/dry</item>
+        <item>@string/wet</item>
+        <item>@string/homemade</item>
+    </string-array>
+
+    <string name="dry">dry</string>
+    <string name="wet">wet</string>
+    <string name="homemade">homemade</string>
+
+    <string name="age">age</string>
+    <string name="weight">weight</string>
+    <string name="title_activity_report_values_daily_graph">ReportValuesDailyGraphActivity</string>
+    <string name="description_about">Welcome to PetCare Application!</string>
+    <string name="description_tests">to do</string>
+
+
+</resources>
+

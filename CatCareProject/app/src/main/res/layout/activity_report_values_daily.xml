@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_report_values_daily"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/tv_report_values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tv_border"
+        android:text="@string/text_report_value_date"
+        android:textAlignment="center"
+        android:textSize="22sp" />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_gr_btn_val_daily"
+        android:layout_below="@+id/tv_report_values"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/lightBlue"
+            android:padding="8dp"
+            android:weightSum="9">
+
+            <TextView
+                android:id="@+id/tv_quantity_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/header_date"
+                android:textColor="@color/darkGreyText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_quantity_q"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:layout_marginLeft="5dp"
+                android:text="@string/header_intake_value"
+                android:textColor="@color/darkGreyText"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_cat"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/lightGreyBackground" />
+
+        <ListView
+            android:id="@+id/lv_report_values"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gr_btn_val_daily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_gr_values_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="@string/button_viewGraph"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

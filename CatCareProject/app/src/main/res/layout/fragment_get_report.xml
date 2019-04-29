@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_hint_reports_pet"
+        style="@style/InputLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:text="@string/hint_pet" />
+
+    <Spinner
+        android:id="@+id/sp_reports_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/lightYellowDrawer"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:spinnerMode="dialog" />
+
+    <View
+        android:id="@+id/line_cat"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/lightGreyBackground" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/tv_hint_reports_list"
+            style="@style/InputLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_reports_select" />
+
+        <ListView
+            android:id="@+id/lv_report_titles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightGreyBackground"/>
+
+    </LinearLayout>
+</LinearLayout>

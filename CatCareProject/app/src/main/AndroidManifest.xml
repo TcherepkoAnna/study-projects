@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.anna.catcareproject">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_cat"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/CustomAppTheme">
+        <activity
+            android:name="org.ibmt.diplom.catcareproject.control.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.ibmt.diplom.catcareproject.view.ReportRatesActivity" />
+        <activity android:name="org.ibmt.diplom.catcareproject.view.ReportMealsActivity" />
+        <activity android:name="org.ibmt.diplom.catcareproject.view.ReportValuesDailyActivity" />
+        <activity android:name="org.ibmt.diplom.catcareproject.view.ReportQuantityDailyActivity" />
+        <activity android:name="org.ibmt.diplom.catcareproject.view.ReportQuantityDailyGraphActivity" />
+        <activity android:name="org.ibmt.diplom.catcareproject.view.WithActionBarActivity" />
+        <activity
+            android:name="org.ibmt.diplom.catcareproject.view.ReportValuesDailyGraphActivity"
+            android:label="@string/title_activity_report_values_daily_graph" />
+        <activity android:name="org.ibmt.diplom.catcareproject.view.FragmentLabTests"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,210 @@
+<resources>
+    <string name="app_name">Pet Care</string>
+    <string-array name="menuTitles_array">
+        <item>@string/item_add_pet</item>
+        <item>@string/item_add_meal</item>
+        <item>@string/item_add_food</item>
+        <item>@string/item_add_intakeRate</item>
+        <item>@string/item_add_analysis</item>
+        <item>@string/item_get_report</item>
+        <item>@string/item______</item>
+        <item>@string/item_contacts</item>
+        <item>@string/item_about</item>
+    </string-array>
+
+    <string name="item_add_pet">ПИТОМЦЫ</string>
+    <string name="item_add_intakeRate">НОРМЫ</string>
+    <string name="item_add_meal">ПРИЕМЫ ПИЩИ</string>
+    <string name="item_add_food">КОРМА</string>
+    <string name="item_add_analysis">АНАЛИЗЫ</string>
+    <string name="item_get_report">ОТЧЕТЫ</string>
+    <string name="item______"></string>
+    <string name="item_contacts">контакты</string>
+    <string name="item_about">о программе</string>
+
+
+    <string-array name="reports_array">
+        <item>@string/item_report_1</item>
+        <item>@string/item_report_2</item>
+        <item>@string/item_report_3</item>
+        <item>@string/item_report_4</item>
+        <item>@string/item_report_5</item>
+    </string-array>
+
+    <string name="item_report_1">\nпараметры выбранной питательной нормы\n</string>
+    <string name="item_report_2">\nпотребление питательных элементов по дням\n</string>
+    <string name="item_report_3">\nвсе приемы пищи\n</string>
+    <string name="item_report_4">\nколичество корма по дням\n</string>
+    <string name="item_report_5">\nсреднее количество корма в день\n</string>
+
+
+    <string-array name="report_rates_keys_array">
+        <item>@string/item__energy</item>
+        <item>@string/item__proteins</item>
+        <item>@string/item__fats</item>
+        <item>@string/item__carbs</item>
+    </string-array>
+
+    <string name="item__name">НАЗВАНИЕ</string>
+    <string name="item__energy">калорийность</string>
+    <string name="item__proteins">белки</string>
+    <string name="item__fats">жиры</string>
+    <string name="item__carbs">углеводы</string>
+    <string name="item__quantity">количество</string>
+
+
+    <string name="drawer_open">Открыть навигационное меню</string>
+    <string name="drawer_close">Закрыть навигационное меню</string>
+    <string name="action_websearch">Интернет-поиск</string>
+    <string name="action_send">Отправить</string>
+    <string name="action_createChooser">Выберите имейл-клиента: </string>
+
+
+    <string name="app_not_available">К сожалению, нет доступного подходящего приложения</string>
+
+    <string name="button_save">сохранить</string>
+    <string name="button_addNewFood">+ новый корм</string>
+    <string name="button_syncFood">загрузить новые корма</string>
+    <string name="button_syncRate">загрузить новые нормы</string>
+    <string name="button_updateFood">update this food</string>
+    <string name="button_addCat">+ новый питомец</string>
+    <string name="button_updateCat">update this pet</string>
+    <string name="button_addCatPhoto">добавить фото</string>
+    <string name="button_deleteFood">delete this food</string>
+    <string name="button_deleteCat">delete this pet</string>
+    <string name="button_addRate">+ новая норма</string>
+    <string name="button_updateRate">update this rate</string>
+    <string name="button_deleteRate">delete this rate</string>
+    <string name="button_viewGraph">график</string>
+    <string name="button_add_contact">+ новая запись</string>
+    <string name="button_add">добавить</string>
+    <string name="button_cat_add_meal">добавить прием пищи питомцу</string>
+    <string name="button_choose_meal_date">+ дата</string>
+
+    <string name="hint_foodName">Введите название корма: </string>
+    <string name="hint_foodState">Введите состояние корма: </string>
+    <string name="hint_intakeRate_name">Введите название нормы: </string>
+    <string name="hint_catName">Введите имя питомца: </string>
+    <string name="hint_catDateOFfBirth">Выберите дату рождения питомца: </string>
+    <string name="hint_catNorm">Выберите питательную норму для питомца: </string>
+    <string name="hint_energy_value">Введите значение калорийности: </string>
+    <string name="hint_proteins_value">Введите количество белков: </string>
+    <string name="hint_fats_value">Введите количество жиров: </string>
+    <string name="hint_carbs_value">Введите количество углеводов: </string>
+    <string name="hint_age">Введите возраст: </string>
+    <string name="hint_weight">Введите вес: </string>
+    <string name="hint_name">Введите имя</string>
+    <string name="hint_tel_number">Введите номер телефона</string>
+    <string name="hint_description">Введите описание</string>
+    <string name="hint_sex">Выберите пол: </string>
+    <string name="hint_condition">Выберите состояние здоровья: </string>
+    <string name="hint_pet_gender">Выберите тип питомца: </string>
+    <string name="hint_pet">Выберите питомца: </string>
+    <string name="hint_food">Выберите корм: </string>
+    <string name="hint_reports_select">Выберите отчет: </string>
+    <string name="hint_chosen_cat"> выберите сначала питомца</string>
+    <string name="hint_meal_quantity">Введите количество, гр.</string>
+
+    <string name="toastNewCat">добавлен новый питомец с id: </string>
+    <string name="toastNewContact">добавлена новая запись с id: </string>
+    <string name="toastNewFood">добавлен новый корм с id: </string>
+    <string name="toastNewRate">добавлена новая норма с id: </string>
+    <string name="toastFoodUpdated">количество отредактированных кормов: </string>
+    <string name="toastCatUpdated">количество отредактированных питомцев: </string>
+    <string name="toastContactUpdated">количество отредактированных записей: </string>
+    <string name="toastRateUpdated">количество отредактированных норм: </string>
+    <string name="toastFoodDeleted">количество удаленных кормов: </string>
+    <string name="toastRateDeleted">количество удаленных норм: </string>
+    <string name="toastCatDeleted">количество удаленных питомцев: </string>
+    <string name="toast_fill_the_field">Заполните поле, пожалуйста</string>
+    <string name="toast_fill_all_fields">Заполните все поля, пожалуйста</string>
+    <string name="toast_food_exists">Такой корм уже существует</string>
+    <string name="toast_contact_exists">Такая запись уже существует</string>
+    <string name="toast_rate_exists">Такая норма уже существует</string>
+    <string name="toast_choose_item">Сделайте выбор сначала</string>
+    <string name="toastContactDeleted">количество удаленных записей: </string>
+    <string name="toastNewCalendar">добавлена новая календарная запись с id:</string>
+    <string name="toast_foods_added">количество добавленных кормов: </string>
+    <string name="toast_rates_added">количество добавленных норм: </string>
+
+    <string name="cMenu_update">редактировать</string>
+    <string name="cMenu_delete">удалить</string>
+    <string name="cMenu_add_meal_cat">добавить прием пищи питомцу</string>
+    <string name="cMenu_add_photo">добавить фото</string>
+    <string name="cMenu_show">показать</string>
+    <string name="text_report_rate">ПАРАМЕТРЫ НОРМЫ </string>
+    <string name="text_report_value_date">ПОКАЗАТЕЛИ ПИТАТЕЛЬНЫХ ЭЛЕМЕНТОВ</string>
+    <string name="text_report_meals">ВСЕ ПРИЕМЫ ПИЩИ</string>
+    <string name="text_report_quantity">ДНЕВНОЕ КОЛИЧЕСТВО ЕДЫ</string>
+    <string name="text_report_prot">, ПРОТЕИНОВ</string>
+
+
+    <string name="header_date">Дата </string>
+    <string name="header_quantity">Количество, гр. </string>
+    <string name="header_quantity_total">Общее количество, гр. </string>
+    <string name="header_food_name">Продукт </string>
+    <string name="header_intake_value">Показатели </string>
+
+    <string-array name="sex_array">
+        <item>@string/unknown_sex</item>
+        <item>@string/female</item>
+        <item>@string/male</item>
+    </string-array>
+
+    <string name="male">мужской</string>
+    <string name="female">женский</string>
+    <string name="unknown_sex">неизвестный пол</string>
+
+    <string-array name="pet_gender_array">
+        <item>@string/other</item>
+        <item>@string/cat</item>
+        <item>@string/dog</item>
+    </string-array>
+
+    <string name="cat">кот</string>
+    <string name="dog">собака</string>
+    <string name="other">другой тип</string>
+
+    <string-array name="food_state_array">
+        <item>@string/dry</item>
+        <item>@string/wet</item>
+        <item>@string/homemade</item>
+    </string-array>
+
+    <string name="dry">сухой</string>
+    <string name="wet">влажный</string>
+    <string name="homemade">домашний</string>
+
+
+    <string-array name="health_condition_array">
+        <item>общее состояние</item>
+        <item>детеныш</item>
+        <item>кормящая</item>
+        <item>пожилой</item>
+        <item>хпн</item>
+        <item>диабет</item>
+        <item>ожирение</item>
+    </string-array>
+
+
+    <string name="age">возраст</string>
+    <string name="weight">вес</string>
+    <string name="description_about">Добро пожаловать в приложение Pet Care! \n(забота о питомце) \n \n\n
+        В меню ПИТОМЦЫ можно добавлять, редактировать и удалять профили питомцев. \n\n
+        В меню ПРИЕМЫ ПИЩИ добавьте прием пищи питомцу, выбрав корм из существующего списка. \n\n
+        В меню КОРМА и НОРМЫ вы можете вносить и редактировать как свои позиции, так и загружать существующие промышленные корма и  стандартные/официальные нормы из удаленной базы данных. \n\n
+        Меню АНАЛИЗЫ находится в разработке и будет доступен в ближайшее время. Здесь можно будет вести учет показателей не связанных с питанием - лабораторных анализов, а также жизненных показателей питомца. \n\n
+        В меню ОТЧЕТЫ можно получить разнообразные отчеты на основе внесенных приемов пищи и заданных норм питания в виде таблиц и графиков и отправить их по почте. \n\n
+        В меню КОНТАКТЫ вы получаете быстрый доступ к контактам нужных специалистов - все в одном месте, можно сразу звонить и писать сообщения! \n\n
+        Изменять выбор питомца можно как из главного меню, нажав на стрелку в углу картинки, так и из выпадающего списка в меню ПРИЕМЫ ПИЩИ и ОТЧЕТЫ. \n
+        Для редактирования или удаления записи нужно нажать на нее и удерживать 2 секунды до открытия контекстного меню. \n\n\n
+        Приятного пользования!\n\n\n
+        * * *
+    </string>
+    <string name="description_tests">Меню АНАЛИЗЫ находится в разработке и будет доступен в ближайшее время. Здесь можно будет вести учет показателей не связанных с питанием - лабораторных анализов, а также жизненных показателей питомца. \n\n
+    * * *
+    </string>
+
+
+</resources>
+
