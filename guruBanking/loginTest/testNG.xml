@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="validate login credentials">
+
+    <test name="testLogin">
+        <classes>
+            <class name="guruBanking.loginTest.TestLogin"/>
+
+        </classes>
+    </test>
+
+
+</suite>

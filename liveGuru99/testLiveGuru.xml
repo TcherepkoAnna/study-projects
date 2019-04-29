@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="liveGuru">
+
+    <test name="verifyMobile">
+        <classes>
+            <class name="liveGuru99.testMobileList"/>
+
+        </classes>
+    </test>
+
+
+</suite>
