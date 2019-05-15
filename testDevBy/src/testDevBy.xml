@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="DevBy">
+
+    <test name="testCompanies">
+        <!--<parameter name="Browser" value="Firefox"/>-->
+        <parameter name="Browser" value="Chrome"/>
+        <classes>
+            <class name="testDevBy.tests.CompaniesTest"/>
+
+        </classes>
+    </test>
+
+
+</suite>
