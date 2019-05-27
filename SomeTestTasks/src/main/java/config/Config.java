@@ -2,56 +2,49 @@ package config;
 
 import org.apache.log4j.Logger;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.util.Properties;
 
 public class Config {
 
     private final static Logger LOG = Logger.getLogger(Config.class);
     private Properties properties = new Properties();
+    private static final String propertiePath = "src\\main\\resources\\config.properties";
 
-    public static final String DRIVER_NAME_FIREFOX = "webdriver.gecko.driver";
-    public static final String DRIVER_NAME_CHROME = "webdriver.chrome.driver";
-    public static final String FIREFOX_BINARY_PATH = "firefox_binary_path";
-    public static final String TUT_BY_URL = "tut_by_url";
-    public static final String ONLINER_CATALOG_URL = "onliner_catalog_url";
-    public static final String PREFERRED_BROWSER = "preferred_browser";
-    public static final String WAIT_TIME = "wait";
+
+    private static final String TUT_BY_URL = "tut_by_url";
+    private static final String ONLINER_CATALOG_URL = "onliner_catalog_url";
+    private static final String PREFERRED_BROWSER = "preferred_browser";
+    private static final String WAIT_TIME = "wait";
+
+    private static final String VIDEOCARDS_MAX_AGE = "videocards_no_older_than_years";
+    private static final String VIDEOCARDS_MIN_SIZE = "videomemory_size_min";
+    private static final String VIDEOCARDS_MAX_SIZE = "videomemory_size_max";
+    private static final String VIDEOCARDS_MEMORY_TYPE = "videomemory_type";
+    private static final String VIDEOCARDS_ORDER_BY = "order_videocards_by";
+    private static final String VIDEOCARDS_MIN_RATING = "rating_min";
+
+    private static final String DOWNLOAD_DIR = "download_directory";
+
+
+
     public static final String SEARCH_INPUT = "search_input";
 
 
     public Config() {
-        InputStream input = null;
-        try {
-            input = new FileInputStream("src\\main\\resources\\config.properties");
+
+        try (FileInputStream input = new FileInputStream(new File(propertiePath));
+             InputStreamReader reader = new InputStreamReader(input, Charset.forName("UTF-8"));) {
             // load a properties file
-            properties.load(input);
+            properties.load(reader);
+
         } catch (IOException ex) {
             LOG.error(ex.getMessage());
-        } finally {
-            if (input != null) {
-                try {
-                    input.close();
-                } catch (IOException e) {
-                    LOG.error(e.getMessage());
-                }
-            }
         }
+
     }
 
-    public String getDriverPathFirefox() {
-        return properties.getProperty(DRIVER_NAME_FIREFOX);
-    }
-
-    public String getDriverPathChrome() {
-        return properties.getProperty(DRIVER_NAME_CHROME);
-    }
-
-    public String getFirefoxBinaryPath() {
-        return properties.getProperty(FIREFOX_BINARY_PATH);
-    }
 
     public String getTutByUrl() {
         return properties.getProperty(TUT_BY_URL);
@@ -75,4 +68,31 @@ public class Config {
     }
 
 
+    public int getVideocardsMaxAge() {
+        return Integer.valueOf(properties.getProperty(VIDEOCARDS_MAX_AGE));
+    }
+
+    public String getVideocardsMinSize() {
+        return properties.getProperty(VIDEOCARDS_MIN_SIZE);
+    }
+
+    public String getVideocardsMaxSize() {
+        return properties.getProperty(VIDEOCARDS_MAX_SIZE);
+    }
+
+    public String getVideocardsMemoryType() {
+        return properties.getProperty(VIDEOCARDS_MEMORY_TYPE);
+    }
+
+    public String getVideocardsOrderBy() {
+        return properties.getProperty(VIDEOCARDS_ORDER_BY);
+    }
+
+    public Double getVideocardsMinRating() {
+        return Double.valueOf(properties.getProperty(VIDEOCARDS_MIN_RATING));
+    }
+
+    public String getDownloadDir() {
+        return properties.getProperty(DOWNLOAD_DIR);
+    }
 }

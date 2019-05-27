@@ -17,11 +17,12 @@ public class Offers {
     public final static Logger LOG = Logger.getLogger(Offers.class);
     private String urlOffers;
 
-    public static final By OFFER_CONTAINER_LOCATOR = By.xpath("//tr[contains(@class, 'state_add-to-cart')]");
+    public static final By OFFER_CONTAINER_LOCATOR = By.xpath("//tr[contains(@class, 'state_add-to-cart') and not(contains(@style, 'display: none'))]");
     public static final By OFFER_PRICE_LOCATOR = By.xpath(".//p[contains(@class, 'price-primary')]//span");
     public static final By OFFER_LOGOLINK_LOCATOR = By.xpath(".//a[contains(@class, 'logo')]");
 
     public Offers(WebDriver driver, String url) {
+        LOG.debug("creating Offers page");
         this.driver = driver;
         this.urlOffers = url;
         PageFactory.initElements(driver, this);
@@ -55,15 +56,20 @@ public class Offers {
     }
 
     public Seller getSeller(WebElement offer) {
+        LOG.debug("getting link from seller's logo image");
         WebElement offerLogoLink = offer.findElement(OFFER_LOGOLINK_LOCATOR);
         String urlSeller = offerLogoLink.getAttribute("href");
+        LOG.debug("seller's url: " + urlSeller);
         Util.scrollIntoView(jsExecutor, offerLogoLink);
         offerLogoLink.click();
         return new Seller(driver, urlSeller);
     }
 
     public boolean checkUrl() {
-        return driver.getCurrentUrl().contains(urlOffers);
+        String actual = driver.getCurrentUrl();
+        String shouldContain = urlOffers.substring(urlOffers.indexOf('/'));
+        LOG.debug("Verifying urls: actual url: " + actual + ", should contain: " + shouldContain);
+        return actual.contains(shouldContain);
     }
 
 }

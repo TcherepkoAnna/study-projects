@@ -19,9 +19,8 @@ import java.util.stream.Stream;
 public class TestUploadDownload extends TestBase {
     public static final Logger LOG = Logger.getLogger(TestUploadDownload.class);
     private Config config = new Config();
-    public static final String UPLOAD_LIST_FILEPATH = System.getProperty("user.dir") + "\\src\\main\\resources\\toUploadList.txt";
-    public static final String DOWNLOAD_LIST_FILEPATH = System.getProperty("user.dir") + "\\src\\main\\resources\\toDownloadList.txt";
-    String downloadDirPath = "C:\\___TEST_BAK\\downloads";
+    private static final String UPLOAD_LIST_FILEPATH = System.getProperty("user.dir") + "\\src\\main\\resources\\toUploadList.txt";
+    private static final String DOWNLOAD_LIST_FILEPATH = System.getProperty("user.dir") + "\\src\\main\\resources\\toDownloadList.txt";
 
     @Test(priority = 0)
     public void uploadingFiles() {
@@ -74,10 +73,10 @@ public class TestUploadDownload extends TestBase {
             driver.get(url.trim());
             DownloadPage downloadPage = new DownloadPage(driver, url);
             Map<String, String> filesToDownload = downloadPage.getAllFilesToDownload();
-            Assert.assertTrue(createDirectory(downloadDirPath));
+            Assert.assertTrue(createDirectory(config.getDownloadDir()));
             filesToDownload.forEach((fileName, fileLink) -> {
                 LOG.info("download source: " + fileLink + " for file: " + fileName);
-                downloadFromLink(downloadDirPath + File.separator + fileName, fileLink);
+                downloadFromLink(config.getDownloadDir() + File.separator + fileName, fileLink);
             });
         }
     }

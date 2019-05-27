@@ -16,6 +16,7 @@ public class Seller {
 
 
     public Seller(WebDriver driver, String url) {
+        LOG.debug("creating seller's page");
         this.driver = driver;
         this.urlSeller = url;
         PageFactory.initElements(driver, this);
@@ -23,13 +24,17 @@ public class Seller {
     }
 
     public String getName() {
-        LOG.debug("Getting name");
+        LOG.debug("getting name");
         String name = driver.findElement(SELLER_NAME_LOCATOR).getText();
+        LOG.debug("seller's name: " + name);
         return name;
     }
 
     public boolean checkUrl() {
-        return driver.getCurrentUrl().contains(urlSeller);
+        String actual = driver.getCurrentUrl();
+        String shouldContain = urlSeller.substring(urlSeller.indexOf('/'));
+        LOG.debug("Verifying urls: actual url: " + actual + ", should contain: " + shouldContain);
+        return actual.contains(shouldContain);
     }
 
 }
