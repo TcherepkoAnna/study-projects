@@ -11,10 +11,7 @@ public class FirefoxCreator implements DriverCreator{
 
     @Override
     public WebDriver createDriver() {
-//        System.setProperty(config.DRIVER_NAME_FIREFOX, config.getDriverPathFirefox());
         FirefoxOptions options = new FirefoxOptions();
-//        options.setBinary(config.getFirefoxBinaryPath());
-//        options.setProfile(new FirefoxProfile());
         WebDriver driver = new FirefoxDriver(options);
         return driver;
     }

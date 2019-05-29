@@ -10,8 +10,6 @@ public class ChromeCreator implements DriverCreator {
 
     @Override
     public WebDriver createDriver() {
-
-//        System.setProperty(config.DRIVER_NAME_CHROME, config.getDriverPathChrome());
         return new ChromeDriver();
     }
 }

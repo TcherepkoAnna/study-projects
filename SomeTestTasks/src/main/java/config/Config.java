@@ -2,7 +2,10 @@ package config;
 
 import org.apache.log4j.Logger;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.Properties;
 
@@ -27,6 +30,11 @@ public class Config {
 
     private static final String DOWNLOAD_DIR = "download_directory";
 
+
+    private static final String FTP_USERNAME = "ftp_username";
+    private static final String FTP_PASSWORD = "ftp_password";
+    private static final String FTP_HOSTNAME = "ftp_hostname";
+    private static final String FTP_DIR_TO_CREATE_NAME = "ftp_dirToCreate";
 
 
     public static final String SEARCH_INPUT = "search_input";
@@ -94,5 +102,21 @@ public class Config {
 
     public String getDownloadDir() {
         return properties.getProperty(DOWNLOAD_DIR);
+    }
+
+    public String getFtpUsername() {
+        return properties.getProperty(FTP_USERNAME);
+    }
+
+    public String getFtpPassword() {
+        return properties.getProperty(FTP_PASSWORD);
+    }
+
+    public String getFtpHostname() {
+        return properties.getProperty(FTP_HOSTNAME);
+    }
+
+    public String getFtpDirToCreateName() {
+        return properties.getProperty(FTP_DIR_TO_CREATE_NAME);
     }
 }

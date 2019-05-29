@@ -5,9 +5,9 @@
     <test name="test_01">
         <classes>
             <class name="tests.TestBase"/>
-            <!--<class name="tests.TestTutBy"/>-->
             <class name="tests.TestOnliner"/>
-            <class name="tests.TestUploadDownload"/>
+            <!--<class name="tests.TestUploadDownload"/>-->
+            <!--<class name="tests.TestFtp"/>-->
         </classes>
     </test>
 
